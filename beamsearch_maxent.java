@@ -170,27 +170,6 @@ public class beamsearch_maxent {
 		getBound.close();
 		//<processing>
 		
-	}
-	
-	
-	
-	/**
-	 * build the ML model using the file referred by "model"
-	 *  for each instance, only give rates to topN classes 
-	 */
-	private static void buildMLModel() {
-		//TODO: use model file to build the model
-	}
-	
-	/**
-	 * 
-	 * @param features: the features of a feature vector, map from feature name to feature value
-	 * @return: return the topN classes with rating
-	 */
-	private static Map<String, Double> getRating(Map<String, Double> features) {
-		//TODO: use haotian's maxent
-		return null;
-	}
-	
+	}	
 	
 }
