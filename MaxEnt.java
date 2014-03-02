@@ -63,6 +63,9 @@ public class MaxEnt {
          double sum = default_weights.get(label);
       
          for (String word : feature_vector.keySet()) {
+            if (!model.get(label).containsKey(word)) {
+               model.get(label).put(word, 0.0);
+            }
             sum += model.get(label).get(word);
          }
          double result = Math.exp(sum);
