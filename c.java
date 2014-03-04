@@ -1,3 +1,6 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -136,7 +139,7 @@ public class c {
 		return ret;
 	}
 	
-	public static <T extends Comparable<T>> Stack<String> getWordDecentOrder(Map<String, T> gramMap) {
+	public static <T extends Comparable<T>> Stack<String> getWordDecendOrder(Map<String, T> gramMap) {
 		SortedMap<T, List<String>> orderMap = produceFreqToToken(gramMap);
 		Stack<String> ret = new Stack<String>();
 		for(T order : orderMap.keySet()) {
@@ -213,6 +216,12 @@ public class c {
 			}
 		}
 		return allFiles;
+	}
+	
+	public static String getCurTime() {
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		return dateFormat.format(date);
 	}
 	
 	public static double log(double x, double base) {

@@ -1,4 +1,3 @@
-#!/bin/sh
+#!/bin/bash
 
-javac *.java
 java beamsearch_maxent $@
